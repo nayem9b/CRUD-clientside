@@ -3,12 +3,21 @@ import React from "react";
 const AddProduct = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
+    const form = e.target;
     const product = {
-      name: e.target.name.value,
-      price: parseInt(e.target.price.value),
-      image: e.target.image.value,
+      name: form.name.value,
+      price: parseInt(form.price.value),
+      image: form.image.value,
     };
     console.log(product.name, product.price, product.image);
+
+    fetch("http://localhost:5000/product", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    });
   };
   return (
     <div>
