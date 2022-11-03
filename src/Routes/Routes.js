@@ -1,3 +1,6 @@
+import AllProducts from "../AllProducts";
+import EditProduct from "../EditProduct";
+
 const { createBrowserRouter } = require("react-router-dom");
 const { default: AddProduct } = require("../AddProduct");
 const { default: Edit } = require("../Edit");
@@ -17,6 +20,14 @@ const routes = createBrowserRouter([
       {
         path: "/edit",
         element: <Edit></Edit>,
+      },
+      {
+        path: "/allproducts",
+        element: <AllProducts></AllProducts>,
+      },
+      {
+        path: "/edit/:id",
+        element: <EditProduct></EditProduct>,
       },
     ],
   },

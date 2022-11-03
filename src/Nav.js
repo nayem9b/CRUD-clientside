@@ -38,6 +38,13 @@ const Nav = () => {
                     Add Products
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    class='text-gray-500 transition hover:text-gray-500/75'
+                    to='/allproducts'>
+                    All Products
+                  </Link>
+                </li>
 
                 {/* <li>
                   <a
